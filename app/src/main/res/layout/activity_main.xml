@@ -1,7 +1,5 @@
-
-<!-- a testing file, lab act -->
-
 <?xml version="1.0" encoding="utf-8"?>
+<!-- a testing file, lab act -->
 <LinearLayout
     android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"

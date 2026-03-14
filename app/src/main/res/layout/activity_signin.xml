@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:elevation="10dp"
-        android:src="@drawable/ic_busIcon"
+        android:src="@drawable/ic_bus_icon"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="319dp" />
 
