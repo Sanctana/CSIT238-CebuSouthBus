@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
 
         // Wait for 2 seconds then transition to LoginActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, AuthChoiceActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

@@ -3,9 +3,7 @@ package com.example.testing
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-
-// a testing file
-class LoginActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
