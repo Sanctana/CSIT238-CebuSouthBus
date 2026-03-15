@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="bus_blue">#3450BE</color>
+    <color name="bus_yellow">#FFDE03</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#212121</color>
 </resources>
