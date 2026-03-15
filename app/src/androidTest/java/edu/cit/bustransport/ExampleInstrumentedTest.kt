@@ -1,4 +1,4 @@
-package com.example.testing
+package edu.cit.bustransport
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

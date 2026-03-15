@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.testing"
+    namespace = "edu.cit.tangpos.bustransport"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.testing"
+        applicationId = "edu.cit.tangpos.bustransport"
         minSdk = 34
         targetSdk = 34
         versionCode = 1

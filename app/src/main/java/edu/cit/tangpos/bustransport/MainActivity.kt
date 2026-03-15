@@ -1,4 +1,4 @@
-package com.example.testing
+package edu.cit.tangpos.bustransport
 
 import android.annotation.SuppressLint
 import android.content.Intent

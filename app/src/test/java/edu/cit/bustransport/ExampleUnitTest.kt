@@ -1,4 +1,4 @@
-package com.example.testing
+package edu.cit.bustransport
 
 import org.junit.Test
 

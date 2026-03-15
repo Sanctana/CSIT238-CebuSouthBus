@@ -1,4 +1,4 @@
-package com.example.testing
+package edu.cit.tangpos.bustransport
 
 import android.content.Intent
 import android.os.Bundle
