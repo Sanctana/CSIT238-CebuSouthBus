@@ -1,10 +1,13 @@
 package edu.cit.tangpos.bustransport
 
+import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import edu.cit.tangpos.bustransport.database.DBHelper
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -44,8 +47,20 @@ class RegistrationActivity : AppCompatActivity() {
             } else if (password != confirmPassword) {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             } else {
+                val db = DBHelper(this).writableDatabase
+                val userValues = ContentValues().apply {
+                    put(DBHelper.USERS_FIRST_NAME, firstName)
+                    put(DBHelper.USERS_MIDDLE_NAME, middleName)
+                    put(DBHelper.USERS_LAST_NAME, lastName)
+                    put(DBHelper.USERS_PASSWORD, Utility.hashPassword(password))
+                    put(DBHelper.USERS_EMAIL, email)
+                }
+
+                db.insert(DBHelper.TABLE_USERS, null, userValues)
                 Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
-                // Proceed with registration logic
+
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
         }
     }

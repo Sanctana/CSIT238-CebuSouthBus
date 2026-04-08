@@ -3,9 +3,11 @@ package edu.cit.tangpos.bustransport
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.edit
+import edu.cit.tangpos.bustransport.database.DBHelper
 
 // a testing file
 class LoginActivity : AppCompatActivity() {
@@ -14,23 +16,24 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signin)
 
         val email = findViewById<EditText>(R.id.etEmail)
-        val buttonLogin = findViewById<AppCompatButton>(R.id.btnSignIn)
+        val password = findViewById<EditText>(R.id.etPassword)
 
-        buttonLogin.setOnClickListener {
-            val emailValue = email.text.toString()
-            val intent = Intent(this, HomeActivity::class.java)
+        findViewById<AppCompatButton>(R.id.btnSignIn).setOnClickListener {
+            val db = DBHelper(this).readableDatabase
 
-            // Requirements for activity
-            intent.putExtra("email", emailValue)
+            db.rawQuery("SELECT * FROM ${DBHelper.TABLE_USERS} WHERE ${DBHelper.USERS_EMAIL} = ? AND ${DBHelper.USERS_PASSWORD} = ?", arrayOf(email.text.toString(),
+                Utility.hashPassword(password.text.toString()))).use { cursor ->
+                if (cursor.moveToFirst()) {
+                    val sharedPreferences = getSharedPreferences("Bus Transport", MODE_PRIVATE)
+                    sharedPreferences.edit {
+                        putString("userId", cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.USERS_ID)))
+                    }
 
-
-            // Activity
-            val sharedPreferences = getSharedPreferences("Bus Transport", MODE_PRIVATE)
-            sharedPreferences.edit {
-                putString("isLoggedIn", "true")
+                    startActivity(Intent(this, HomeActivity::class.java))
+                } else {
+                    Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+                }
             }
-
-            startActivity(intent)
         }
     }
 }
