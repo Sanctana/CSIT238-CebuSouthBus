@@ -11,7 +11,7 @@ class AboutUsFragment : Fragment(R.layout.fragment_aboutus){
         super.onViewCreated(view, savedInstanceState)
 
         // Handle the back button inside the About Us layout
-        view.findViewById<View>(R.id.topBar)?.setOnClickListener {
+        view.findViewById<View>(R.id.btnBack).setOnClickListener {
             findNavController().popBackStack()
         }
     }

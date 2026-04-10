@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/nav_home">
@@ -26,13 +28,17 @@
         android:id="@+id/nav_account"
         android:name="edu.cit.tangpos.bustransport.fragments.AccountFragment"
         android:label="Account"
-        tools:layout="@layout/fragment_account">
-    </fragment>
+        tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/nav_about_us"
         android:name="edu.cit.tangpos.bustransport.fragments.AboutUsFragment"
         android:label="About Us"
-        tools:layout="@layout/fragment_aboutus">
-    </fragment>
+        tools:layout="@layout/fragment_aboutus" />
+
+    <fragment
+        android:id="@+id/nav_profile_view"
+        android:name="edu.cit.tangpos.bustransport.fragments.ProfileView"
+        android:label="Profile View"
+        tools:layout="@layout/fragment_profile_view" />
 </navigation>
