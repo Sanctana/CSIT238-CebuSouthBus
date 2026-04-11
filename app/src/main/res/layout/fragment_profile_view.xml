@@ -215,7 +215,6 @@
 
                 <!-- edit button -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btnEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -226,6 +225,7 @@
 
                     <!-- button text -->
                     <TextView
+                        android:id="@+id/btnEdit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackground"

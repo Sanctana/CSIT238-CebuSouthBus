@@ -44,7 +44,7 @@ class ProfileView : Fragment(R.layout.fragment_profile_view) {
             findNavController().popBackStack()
         }
         view.findViewById<TextView>(R.id.btnEdit).setOnClickListener {
-
+            findNavController().navigate(R.id.nav_profile_edit)
         }
     }
 }

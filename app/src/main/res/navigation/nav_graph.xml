@@ -41,4 +41,10 @@
         android:name="edu.cit.tangpos.bustransport.fragments.ProfileView"
         android:label="Profile View"
         tools:layout="@layout/fragment_profile_view" />
+
+    <fragment
+        android:id="@+id/nav_profile_edit"
+        android:name="edu.cit.tangpos.bustransport.fragments.ProfileEdit"
+        android:label="Profile Edit"
+        tools:layout="@layout/fragment_profile_edit" />
 </navigation>
