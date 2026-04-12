@@ -1,12 +1,12 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- The light yellow background -->
+    <!-- yellow backg -->
     <item>
         <shape android:shape="rectangle">
             <solid android:color="@color/header_yellow_bg" />
         </shape>
     </item>
-    <!-- The darker yellow border on the left -->
-    <item android:right="350dp"> <!-- Adjust this to control border thickness -->
+    <!-- border left dark -->
+    <item android:right="350dp"> <!-- control thickness i adjust -->
         <shape android:shape="rectangle">
             <solid android:color="@color/header_yellow_border" />
         </shape>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- header blue -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/bus_blue"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="BACK"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- scroll starts here -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support and Feedback"
+                android:textColor="@color/text_dark"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- subtitle -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Need help or have suggestions? We're ready to listen."
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+
+            <!-- gen sup -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="top">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_phone"
+                    android:contentDescription="Phone"
+                    app:tint="@color/text_dark"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="General Support"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="For booking issues and general inquiries.\nPhone: +63 906 214 2182\nEmail: support@cebusouthbus.com"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"/>
+
+            <!-- lost and found -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="top">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_briefcase"
+                    android:contentDescription="Lost and Found"
+                    app:tint="@color/text_dark"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lost and Found"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Report lost items from your trip.\nPhone: +63 910 651 2152\nEmail: lostfound@cebusouthbus.com"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"/>
+
+            <!-- disability assist -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="top">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_accessibility"
+                    android:contentDescription="Disability Assistance"
+                    app:tint="@color/text_dark"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Disability Assistance"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Special assistance for passengers with disabilities.\nPhone: +63 961 321 1745\nAvailable: 24/7"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"/>
+
+            <!-- send feedback -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="top">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_message"
+                    android:contentDescription="Feedback"
+                    app:tint="@color/text_dark"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Send Feedback"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Share your experience or suggestions."
+                        android:textColor="#666666"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- feedback area -->
+            <EditText
+                android:id="@+id/etFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/feedback_input_background"
+                android:padding="12dp"
+                android:gravity="top"
+                android:hint="Type your feedback here..."
+                android:textColorHint="#999999"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                android:inputType="textMultiLine|textCapSentences"/>
+
+            <!-- submit feedback button (Now inside ScrollView) -->
+            <Button
+                android:id="@+id/btnSubmitFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_yelllow"
+                android:text="Submit Feedback"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
