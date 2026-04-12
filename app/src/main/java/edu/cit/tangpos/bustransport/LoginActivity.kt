@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.fragment.app.commit
-import edu.cit.tangpos.bustransport.fragments.AccountFragment
 
 
 // a testing file
