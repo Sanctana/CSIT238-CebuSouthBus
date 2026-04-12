@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- HEADER -->
+    <!-- header -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -35,7 +35,7 @@
             android:textSize="16sp"/>
     </LinearLayout>
 
-    <!-- CONTENT -->
+    <!-- content -->
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="0dp"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Confirmation Title -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,17 +59,8 @@
             android:gravity="center"
             android:lineSpacingExtra="4dp"/>
 
-        <!-- Animated Checkmark -->
-        <ImageView
-            android:id="@+id/ivCheckmark"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="32dp"
-            android:alpha="0"
-            android:contentDescription="Confirmed"
-            android:src="@drawable/ic_checkmark_badge" />
 
-        <!-- Thank You Message -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +71,7 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
-        <!-- Booking ID -->
+
         <TextView
             android:id="@+id/tvBookingId"
             android:layout_width="wrap_content"
@@ -91,7 +82,7 @@
             android:textSize="16sp"
             android:gravity="center"/>
 
-        <!-- Keep ID Note -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,13 +93,13 @@
             android:gravity="center"
             android:fontFamily="sans-serif-light"/>
 
-        <!-- Spacer -->
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <!-- Important Note -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,7 +110,6 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- Go To Home Button -->
     <Button
         android:id="@+id/btnGoHome"
         android:layout_width="0dp"
@@ -136,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Make Another Trip Button -->
+
     <Button
         android:id="@+id/btnMakeAnother"
         android:layout_width="0dp"
