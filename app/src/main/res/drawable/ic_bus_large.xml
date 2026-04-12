@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_bus_large.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="80dp"
+    android:viewportWidth="120"
+    android:viewportHeight="80">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M30,10h60c6,0 10,4 10,10v40c0,6 -4,10 -10,10h-5l-5,5h-40l-5,-5h-5c-6,0 -10,-4 -10,-10v-40c0,-6 4,-10 10,-10zM35,25h15v15h-15zM70,25h15v15h-15zM35,65c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5 -5,2.24 -5,5 2.24,5 5,5zM85,65c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5 -5,2.24 -5,5 2.24,5 5,5z"/>
+</vector>

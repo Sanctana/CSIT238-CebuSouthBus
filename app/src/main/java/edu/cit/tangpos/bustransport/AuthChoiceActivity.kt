@@ -13,5 +13,6 @@ class AuthChoiceActivity: AppCompatActivity() {
         findViewById<Button>(R.id.btnSignIn).setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
         }
+
     }
 }

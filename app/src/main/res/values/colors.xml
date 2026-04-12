@@ -2,5 +2,14 @@
     <color name="bus_blue">#3450BE</color>
     <color name="bus_yellow">#FFDE03</color>
     <color name="white">#FFFFFF</color>
+    <color name="light_yellow">#FFF8CE</color> <!-- Fixed the $ to # -->
     <color name="text_dark">#212121</color>
+    <color name="input_gray">#D9D9D9</color>
+
+    <!-- ... for my AboutUs ... -->
+    <color name="header_yellow_bg">#FFF9C4</color>
+    <color name="header_yellow_border">#FBC02D</color>
+    <color name="offer_purple_bg">#B2BCE6</color>
+    <color name="separator_gray">#BDBDBD</color>
+
 </resources>
