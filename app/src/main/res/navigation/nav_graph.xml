@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="edu.cit.tangpos.bustransport.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_book"
+        android:name="edu.cit.tangpos.bustransport.fragments.BookFragment"
+        android:label="Book"
+        tools:layout="@layout/fragment_book" />
+
+    <fragment
+        android:id="@+id/nav_trips"
+        android:name="edu.cit.tangpos.bustransport.fragments.TripsFragment"
+        android:label="My Trips"
+        tools:layout="@layout/fragment_trips" />
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="edu.cit.tangpos.bustransport.fragments.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account">
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+</navigation>

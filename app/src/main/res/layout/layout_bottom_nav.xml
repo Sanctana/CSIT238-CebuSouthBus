@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/bus_yellow"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- home -->
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"
+            app:tint="@color/bus_blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Home"
+            android:textColor="@color/bus_blue"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- book -->
+    <LinearLayout
+        android:id="@+id/navBook"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iconBook"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_book"
+            android:contentDescription="Book"
+            app:tint="@color/text_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Book"
+            android:textColor="@color/text_dark"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- my trips -->
+    <LinearLayout
+        android:id="@+id/navTrips"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iconTrips"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_suitcase"
+            android:contentDescription="My Trips"
+            app:tint="@color/text_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="My Trips"
+            android:textColor="@color/text_dark"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- account -->
+    <LinearLayout
+        android:id="@+id/navAccount"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iconAccount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_account"
+            android:contentDescription="Account"
+            app:tint="@color/text_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Account"
+            android:textColor="@color/text_dark"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -23,7 +23,8 @@
         </activity>
 
         <activity android:name="edu.cit.tangpos.bustransport.AuthChoiceActivity" />
-        <activity android:name="edu.cit.tangpos.bustransport.SignInActivity"/>
+        <activity android:name="edu.cit.tangpos.bustransport.LoginActivity"/>
+        <activity android:name="edu.cit.tangpos.bustransport.HomeActivity"/>
         <activity android:name="edu.cit.tangpos.bustransport.MainActivity" />
 
     </application>

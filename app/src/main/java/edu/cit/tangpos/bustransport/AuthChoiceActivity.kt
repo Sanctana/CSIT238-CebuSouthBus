@@ -11,8 +11,7 @@ class AuthChoiceActivity: AppCompatActivity() {
         setContentView(R.layout.activity_authchoice)
 
         findViewById<Button>(R.id.btnSignIn).setOnClickListener {
-            startActivity(Intent(this, SignInActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
-
     }
 }

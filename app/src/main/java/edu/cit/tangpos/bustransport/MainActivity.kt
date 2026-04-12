@@ -3,16 +3,17 @@ package edu.cit.tangpos.bustransport
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
 
 // a testing file
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,10 +23,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btnLogin = findViewById<Button>(R.id.btnSignIn)
-        btnLogin.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        findViewById<Button>(R.id.btnSignIn).setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }
