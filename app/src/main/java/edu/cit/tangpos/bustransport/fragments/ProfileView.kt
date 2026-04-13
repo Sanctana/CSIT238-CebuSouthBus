@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import edu.cit.tangpos.bustransport.R
+import edu.cit.tangpos.bustransport.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class ProfileView : Fragment(R.layout.fragment_profile_view) {
@@ -16,9 +17,8 @@ class ProfileView : Fragment(R.layout.fragment_profile_view) {
         val tvFullName = view.findViewById<TextView>(R.id.tvFullName)
         val tvEmail = view.findViewById<TextView>(R.id.tvEmail)
         val tvUsername = view.findViewById<TextView>(R.id.tvUserName)
-        val btnEdit = view.findViewById<TextView>(R.id.btnEdit)
 
-        val sharedPreferences = requireContext().getSharedPreferences("Bus Transport", Context.MODE_PRIVATE)
+        val sharedPreferences = requireContext().getSharedPreferences(Utility.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
         val userId = sharedPreferences.getString("userId", null)
 
         if (userId == null){

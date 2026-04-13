@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import edu.cit.tangpos.bustransport.R
 import androidx.core.content.edit
+import edu.cit.tangpos.bustransport.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
@@ -18,7 +19,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         val emailField = view.findViewById<TextView>(R.id.account_email)
         val usernameField = view.findViewById<TextView>(R.id.username)
 
-        val sharedPreferences = requireContext().getSharedPreferences("Bus Transport", Context.MODE_PRIVATE)
+        val sharedPreferences = requireContext().getSharedPreferences(Utility.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
         val userId = sharedPreferences.getString("userId", null)
 
         if (userId == null){

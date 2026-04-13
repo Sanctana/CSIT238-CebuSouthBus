@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 */
 
 //      app ray maka view data, Bus Transport name sa localstorage
-        val sharedPreferences = getSharedPreferences("Bus Transport", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences(Utility.APP_SHARED_PREFERENCES, MODE_PRIVATE)
         val userId = sharedPreferences.getString("userId", null)
 //      for naka log in daan, tan awns localstorage
         if (userId != null){
