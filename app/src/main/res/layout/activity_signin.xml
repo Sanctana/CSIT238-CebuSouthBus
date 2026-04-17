@@ -1,155 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3450BE"
-    android:clipChildren="false"
-    android:clipToPadding="false">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
 
-    <!-- gitangtangan nakog katong constraint top chuchu kay di ko ka adjust sa kanang elements -->
-
-    <View
-        android:id="@+id/whiteSlant"
-        android:layout_width="500dp"
-        android:layout_height="200dp"
-        android:background="#FFFFFF"
-        android:rotation="9.68"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <View
-        android:id="@+id/yellowSection"
-        android:layout_width="1200dp"
-        android:layout_height="1200dp"
-        android:layout_marginTop="-140dp"
-        android:background="#FFE11E"
-        android:elevation="2dp"
-        android:rotation="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whiteSlant" />
-
-
+    <!-- Bus icon -->
     <ImageView
         android:id="@+id/busIcon"
-        android:layout_width="250dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:adjustViewBounds="true"
-        android:elevation="10dp"
-        android:src="@drawable/ic_bus_icon"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="232dp" />
+        android:src="@drawable/ic_bus_icon" />
 
+    <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="10dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="Cebu SouthBus"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="344dp" />
+        android:textStyle="bold" />
 
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="10dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif"
         android:text="Sign in to your account"
-        android:textColor="#333333"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        android:textColor="#FFFFFF"
+        android:alpha="0.8"
+        android:textSize="16sp" />
 
+    <!-- Email Label -->
     <TextView
         android:id="@+id/lblEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:elevation="10dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="Email"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/input_field_rounded"
-        android:elevation="10dp"
         android:fontFamily="sans-serif"
+        android:hint="Enter your email"
         android:inputType="textEmailAddress"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblEmail" />
+        android:paddingHorizontal="16dp" />
 
+    <!-- Password Label -->
     <TextView
         android:id="@+id/lblPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:elevation="10dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="Password"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/input_field_rounded"
-        android:elevation="10dp"
         android:fontFamily="sans-serif"
+        android:hint="Enter your password"
         android:inputType="textPassword"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblPassword" />
+        android:paddingHorizontal="16dp" />
 
+    <!-- Sign In Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignIn"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/btn_blue_rounded"
-        android:elevation="10dp"
+        android:background="@drawable/btn_yellow_rounded"
         android:fontFamily="sans-serif"
         android:text="Sign In"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

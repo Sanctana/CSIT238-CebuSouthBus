@@ -28,7 +28,10 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         }
 
         btnLogOut.setOnClickListener {
-
+            sharedPreferences.edit().apply {
+                putString("isLoggedIn", "false")
+                apply()
+            }
         }
     }
 }
