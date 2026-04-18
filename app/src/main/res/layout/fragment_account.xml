@@ -63,7 +63,7 @@
                         android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Saint Tria Tangpos"
+                        android:text=""
                         android:textColor="@color/text_dark"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -73,7 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="sainttria.tangpos@gmail.com"
+                        android:text=""
                         android:textColor="#666666"
                         android:textSize="12sp" />
                 </LinearLayout>

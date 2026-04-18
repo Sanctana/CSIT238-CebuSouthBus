@@ -27,9 +27,5 @@
         android:name="edu.cit.tangpos.bustransport.fragments.AccountFragment"
         android:label="Account"
         tools:layout="@layout/fragment_account">
-        <argument
-            android:name="email"
-            app:argType="string"
-            android:defaultValue="" />
     </fragment>
 </navigation>

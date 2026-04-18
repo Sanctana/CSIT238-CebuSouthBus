@@ -18,13 +18,20 @@ class LoginActivity : AppCompatActivity() {
         val email = findViewById<EditText>(R.id.etEmail)
         val password = findViewById<EditText>(R.id.etPassword)
 
+        val sharedPreferences = getSharedPreferences("Bus Transport", MODE_PRIVATE)
+        val userId = sharedPreferences.getString("userId", null)
+
+        if (userId != null){
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+
         findViewById<AppCompatButton>(R.id.btnSignIn).setOnClickListener {
             val db = DBHelper(this).readableDatabase
 
             db.rawQuery("SELECT * FROM ${DBHelper.TABLE_USERS} WHERE ${DBHelper.USERS_EMAIL} = ? AND ${DBHelper.USERS_PASSWORD} = ?", arrayOf(email.text.toString(),
                 Utility.hashPassword(password.text.toString()))).use { cursor ->
                 if (cursor.moveToFirst()) {
-                    val sharedPreferences = getSharedPreferences("Bus Transport", MODE_PRIVATE)
                     sharedPreferences.edit {
                         putString("userId", cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.USERS_ID)))
                     }

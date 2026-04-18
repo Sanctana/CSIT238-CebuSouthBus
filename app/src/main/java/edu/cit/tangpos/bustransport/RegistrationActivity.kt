@@ -59,8 +59,7 @@ class RegistrationActivity : AppCompatActivity() {
                 db.insert(DBHelper.TABLE_USERS, null, userValues)
                 Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
+                startActivity(Intent(this, LoginActivity::class.java))
             }
         }
     }
