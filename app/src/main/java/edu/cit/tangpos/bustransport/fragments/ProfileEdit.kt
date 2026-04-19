@@ -6,6 +6,7 @@ import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -13,17 +14,16 @@ import edu.cit.tangpos.bustransport.R
 import edu.cit.tangpos.bustransport.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 import androidx.core.content.edit
+import androidx.navigation.fragment.findNavController
 
 class ProfileEdit : Fragment(R.layout.fragment_profile_edit) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val etFullName = view.findViewById<EditText>(R.id.etFullName)
         val etEmail = view.findViewById<EditText>(R.id.etEmail)
         val etCurrentPassword = view.findViewById<EditText>(R.id.etCurrentPassword)
         val etNewPassword = view.findViewById<EditText>(R.id.etNewPassword)
         val etConfirmPassword = view.findViewById<EditText>(R.id.etConfirmPassword)
-        val btnSave = view.findViewById<TextView>(R.id.btnSave)
 
         val sharedPreferences = requireContext().getSharedPreferences(Utility.APP_SHARED_PREFERENCES, MODE_PRIVATE)
         val userId = sharedPreferences.getString("userId", null)
@@ -37,7 +37,7 @@ class ProfileEdit : Fragment(R.layout.fragment_profile_edit) {
 
         loadUserData(view)
 
-        btnSave.setOnClickListener {
+        view.findViewById<TextView>(R.id.btnSave).setOnClickListener {
             val email = etEmail.text.toString().trim()
             val currentPw = etCurrentPassword.text.toString().trim()
             val newPw = etNewPassword.text.toString().trim()
@@ -85,6 +85,9 @@ class ProfileEdit : Fragment(R.layout.fragment_profile_edit) {
             } else {
                 Toast.makeText(requireContext(), "Update failed", Toast.LENGTH_SHORT).show()
             }
+        }
+        view.findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 
