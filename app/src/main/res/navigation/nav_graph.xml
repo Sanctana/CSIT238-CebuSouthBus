@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="edu.cit.tangpos.bustransport.fragments.HomeFragment"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
 
@@ -26,25 +26,62 @@
 
     <fragment
         android:id="@+id/nav_account"
-        android:name="edu.cit.tangpos.bustransport.fragments.AccountFragment"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.AccountFragment"
         android:label="Account"
         tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/nav_about_us"
-        android:name="edu.cit.tangpos.bustransport.fragments.AboutUsFragment"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.AboutUsFragment"
         android:label="About Us"
         tools:layout="@layout/fragment_aboutus" />
 
     <fragment
         android:id="@+id/nav_profile_view"
-        android:name="edu.cit.tangpos.bustransport.fragments.ProfileView"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.ProfileView"
         android:label="Profile View"
         tools:layout="@layout/fragment_profile_view" />
 
     <fragment
         android:id="@+id/nav_profile_edit"
-        android:name="edu.cit.tangpos.bustransport.fragments.ProfileEdit"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.ProfileEdit"
         android:label="Profile Edit"
         tools:layout="@layout/fragment_profile_edit" />
+
+    <fragment
+        android:id="@+id/nav_popular_destinations"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.PopularDestinations"
+        android:label="Popular Destinations"
+        tools:layout="@layout/fragment_popular_destinations" />
+
+    <fragment
+        android:id="@+id/nav_pd_moalboal"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.Moalboal"
+        android:label="Moalboal"
+        tools:layout="@layout/fragment_pd_moalboal" />
+
+    <fragment
+        android:id="@+id/nav_pd_badian"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.Badian"
+        android:label="Badian"
+        tools:layout="@layout/fragment_pd_badian" />
+
+    <fragment
+        android:id="@+id/nav_pd_oslob"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.Oslob"
+        android:label="Oslob"
+        tools:layout="@layout/fragment_pd_oslob" />
+
+    <fragment
+        android:id="@+id/nav_pd_carcar"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.Carcar"
+        android:label="Oslob"
+        tools:layout="@layout/fragment_pd_carcar" />
+
+    <fragment
+        android:id="@+id/nav_pd_dalaguete"
+        android:name="edu.cit.tangpos.bustransport.fragments.home.Dalaguete"
+        android:label="Oslob"
+        tools:layout="@layout/fragment_pd_dalaguete" />
+
 </navigation>

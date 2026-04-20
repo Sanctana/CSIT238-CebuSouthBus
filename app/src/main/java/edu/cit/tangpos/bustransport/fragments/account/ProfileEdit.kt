@@ -1,4 +1,4 @@
-package edu.cit.tangpos.bustransport.fragments
+package edu.cit.tangpos.bustransport.fragments.account
 
 import android.annotation.SuppressLint
 import android.content.ContentValues

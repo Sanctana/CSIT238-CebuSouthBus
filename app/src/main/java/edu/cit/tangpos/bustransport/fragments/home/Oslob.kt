@@ -1,17 +1,17 @@
-package edu.cit.tangpos.bustransport.fragments
+package edu.cit.tangpos.bustransport.fragments.home
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import edu.cit.tangpos.bustransport.R
 
-class AboutUsFragment : Fragment(R.layout.fragment_aboutus){
+class Oslob : Fragment(R.layout.fragment_pd_oslob) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Handle the back button inside the About Us layout
-        view.findViewById<View>(R.id.btnBack).setOnClickListener {
+        view.findViewById<ImageView>(R.id.btnBack).setOnClickListener {
             findNavController().popBackStack()
         }
     }
