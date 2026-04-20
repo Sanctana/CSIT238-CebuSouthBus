@@ -44,6 +44,9 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         view.findViewById<LinearLayout>(R.id.btnAboutUs).setOnClickListener {
             findNavController().navigate(R.id.nav_about_us)
         }
+        view.findViewById<LinearLayout>(R.id.btnBusCarriers).setOnClickListener {
+            findNavController().navigate(R.id.nav_bus_carriers)
+        }
         view.findViewById<LinearLayout>(R.id.btnLogOut).setOnClickListener {
             sharedPreferences.edit { remove("userId") }
             requireActivity().finish() // Finish the current activity so it redirects to LoginActivity

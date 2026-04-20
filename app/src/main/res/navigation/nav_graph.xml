@@ -84,4 +84,33 @@
         android:label="Oslob"
         tools:layout="@layout/fragment_pd_dalaguete" />
 
+    <fragment
+        android:id="@+id/nav_bus_carriers"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.BusCarriers"
+        android:label="Bus Carriers"
+        tools:layout="@layout/fragment_bus_carriers" />
+
+    <fragment
+        android:id="@+id/nav_bc_ceres"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.CeresBus"
+        android:label="Bus Carriers"
+        tools:layout="@layout/fragment_bc_ceres" />
+
+    <fragment
+        android:id="@+id/nav_bc_metro"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.MetroShuttle"
+        android:label="Bus Carriers"
+        tools:layout="@layout/fragment_bc_metro" />
+
+    <fragment
+        android:id="@+id/nav_bc_sunrays"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.SunraysTransit"
+        android:label="Bus Carriers"
+        tools:layout="@layout/fragment_bc_sunrays" />
+
+    <fragment
+        android:id="@+id/nav_bc_vhire"
+        android:name="edu.cit.tangpos.bustransport.fragments.account.VHire"
+        android:label="Bus Carriers"
+        tools:layout="@layout/fragment_bc_vhire" />
 </navigation>
