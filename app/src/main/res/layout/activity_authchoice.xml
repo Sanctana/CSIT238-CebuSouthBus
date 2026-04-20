@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3450BE"
+    android:background="@drawable/gradient_blue_header"
     android:clipChildren="false"
     android:clipToPadding="false">
 
@@ -16,12 +16,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="92dp"
-
         android:lineSpacingExtra="4dp"
         android:text="Ride South,\nCebu!"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold"
+        android:shadowColor="#40000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="8"
+        android:letterSpacing="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +33,9 @@
         android:id="@+id/whiteSlant"
         android:layout_width="900dp"
         android:layout_height="310dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/gradient_white_slant"
         android:rotation="-15.68"
+        android:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,8 +61,8 @@
         android:layout_width="900dp"
         android:layout_height="800dp"
         android:layout_marginTop="-280dp"
-        android:background="#FFE11E"
-        android:elevation="2dp"
+        android:background="@drawable/gradient_yellow_slant"
+        android:elevation="4dp"
         android:rotation="-7.54"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
@@ -80,23 +85,26 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/btn_blue_rounded"
+            android:background="@drawable/gradient_button_blue"
             android:fontFamily="sans-serif-medium"
             android:text="Sign In"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:elevation="6dp"
+            android:stateListAnimator="@null"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@drawable/btn_white_rounded"
+            android:background="@drawable/btn_white_rounded_shadow"
             android:fontFamily="sans-serif-medium"
             android:text="Sign Up"
             android:textAllCaps="false"
             android:textColor="#333333"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:stateListAnimator="@null"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

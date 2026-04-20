@@ -310,6 +310,7 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
+                app:backgroundTint="@null"
                 android:background="@drawable/btn_blue_rounded"
                 android:text="Review &amp; Pay"
                 android:textColor="@color/white"

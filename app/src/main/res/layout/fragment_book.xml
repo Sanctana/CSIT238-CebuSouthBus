@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -60,13 +61,14 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <!-- scrollable-->
+    <!-- SCROLLABLE CONTENT -->
     <ScrollView
         android:id="@+id/scrollContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -75,221 +77,253 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- ONE-WAY TAB -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#000000"
-                android:text="One-way"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:textStyle="bold"/>
-
-            <!-- YELLOW BOOKING FORM -->
+            <!-- BOOKING FORM CONTAINER -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/bus_yellow"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:paddingBottom="20dp">
 
-                <!-- fromto section -->
+                <!-- BOOKING CARD WITH ELEVATION -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:layout_margin="20dp"
+                    android:background="@color/bus_yellow"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
 
-                    <!-- from input - south bus fixed -->
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <!-- ONE-WAY TAB HEADER -->
+                    <TextView
+                        android:id="@+id/tabOneWay"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/input_background"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp">
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:text="One-way"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_location"
-                            android:contentDescription="Location"
-                            app:tint="@color/text_dark"/>
+                    <!-- BOOKING FORM BODY -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <TextView
-                            android:id="@+id/txtFrom"
-                            android:layout_width="0dp"
+                        <!-- FROM/TO SECTION -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginStart="8dp"
-                            android:text="South Bus"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- FROM INPUT -->
+                            <LinearLayout
+                                android:id="@+id/btnSelectFrom"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/input_background"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_location"
+                                    android:contentDescription="Location"
+                                    app:tint="@color/text_dark"/>
+
+                                <TextView
+                                    android:id="@+id/txtFrom"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="8dp"
+                                    android:text="South Bus"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="14sp"
+                                    android:hint="From"/>
+                            </LinearLayout>
+
+                            <!-- SWAP BUTTON -->
+                            <ImageView
+                                android:id="@+id/btnSwap"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_swap"
+                                android:contentDescription="Swap"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                app:tint="@color/text_dark"/>
+
+                            <!-- TO INPUT -->
+                            <LinearLayout
+                                android:id="@+id/btnSelectTo"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/input_background"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_location"
+                                    android:contentDescription="Location"
+                                    app:tint="@color/text_dark"/>
+
+                                <TextView
+                                    android:id="@+id/txtTo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="8dp"
+                                    android:text="To"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp"
+                                    android:hint="To"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- DEPART SECTION -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Depart"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp"
-                            android:hint="From"/>
-                    </LinearLayout>
+                            android:textStyle="bold"/>
 
-                    <!-- swap button -->
-                    <ImageView
-                        android:id="@+id/btnSwap"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:src="@drawable/ic_swap"
-                        android:contentDescription="Swap"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        app:tint="@color/text_dark"/>
+                        <LinearLayout
+                            android:id="@+id/btnSelectDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/input_background"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
 
-                    <!-- for place - input -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/input_background"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_calendar"
+                                android:contentDescription="Calendar"
+                                app:tint="@color/text_dark"/>
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_location"
-                            android:contentDescription="Location"
-                            app:tint="@color/text_dark"/>
+                            <TextView
+                                android:id="@+id/txtDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:text="Select a date"
+                                android:textColor="#999999"
+                                android:textSize="14sp"/>
 
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_chevron_right"
+                                android:contentDescription="Select"
+                                app:tint="@color/text_dark"/>
+                        </LinearLayout>
+
+                        <!-- TRAVELERS SECTION -->
                         <TextView
-                            android:id="@+id/txtTo"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginStart="8dp"
-                            android:text="To"
-                            android:textColor="#999999"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Travelers"
+                            android:textColor="@color/text_dark"
                             android:textSize="14sp"
-                            android:hint="To"/>
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:id="@+id/btnSelectTravelers"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/input_background"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_person"
+                                android:contentDescription="Travelers"
+                                app:tint="@color/text_dark"/>
+
+                            <TextView
+                                android:id="@+id/txtTravelers"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:text="2 traveler"
+                                android:textColor="@color/text_dark"
+                                android:textSize="14sp"/>
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_chevron_right"
+                                android:contentDescription="Select"
+                                app:tint="@color/text_dark"/>
+                        </LinearLayout>
+
+                        <!-- FIND TRIPS BUTTON -->
+                        <Button
+                            android:id="@+id/btnFindTrips"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/button_white"
+                            app:backgroundTint="@null"
+                            android:text="Find Trips"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textAllCaps="false"
+                            android:elevation="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
-
-                <!-- department section -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Depart"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp"/>
-
-                <LinearLayout
-                    android:id="@+id/btnSelectDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/input_background"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_calendar"
-                        android:contentDescription="Calendar"
-                        app:tint="@color/text_dark"/>
-
-                    <TextView
-                        android:id="@+id/txtDate"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:text="Select a date"
-                        android:textColor="#999999"
-                        android:textSize="14sp"/>
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/ic_chevron_right"
-                        android:contentDescription="Select"
-                        app:tint="@color/text_dark"/>
-                </LinearLayout>
-
-                <!-- travelers section -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Travelers"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp"/>
-
-                <LinearLayout
-                    android:id="@+id/btnSelectTravelers"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/input_background"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_person"
-                        android:contentDescription="Travelers"
-                        app:tint="@color/text_dark"/>
-
-                    <TextView
-                        android:id="@+id/txtTravelers"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:text="2 traveler"
-                        android:textColor="@color/text_dark"
-                        android:textSize="14sp"/>
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/ic_chevron_right"
-                        android:contentDescription="Select"
-                        app:tint="@color/text_dark"/>
-                </LinearLayout>
-
-                <!-- find trips na content -->
-                <Button
-                    android:id="@+id/btnFindTrips"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/button_white"
-                    app:backgroundTint="@null"
-                    android:text="Find Trips"
-                    android:textColor="@color/text_dark"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
             </LinearLayout>
 
-            <!-- popular routes na content - outer -->
+            <!-- POPULAR ROUTES SECTION -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -300,13 +334,13 @@
                     android:textStyle="bold"
                     android:layout_marginBottom="16dp"/>
 
-                <!-- routes grid - box 4 -->
+                <!-- ROUTES GRID -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- pop routes - row 1 -->
+                    <!-- ROW 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -316,35 +350,37 @@
                         <TextView
                             android:id="@+id/routeOslob"
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="60dp"
                             android:layout_weight="1"
                             android:layout_marginEnd="8dp"
                             android:background="@drawable/route_card_background"
                             android:text="Cebu → Oslob"
                             android:textColor="@color/text_dark"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:clickable="true"
-                            android:focusable="true"/>
+                            android:focusable="true"
+                            android:elevation="2dp"/>
 
                         <TextView
                             android:id="@+id/routeMoalboal"
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="60dp"
                             android:layout_weight="1"
-                            android:layout_marginStart="6dp"
+                            android:layout_marginStart="8dp"
                             android:background="@drawable/route_card_background"
                             android:text="Cebu → Moalboal"
                             android:textColor="@color/text_dark"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:clickable="true"
-                            android:focusable="true"/>
+                            android:focusable="true"
+                            android:elevation="2dp"/>
                     </LinearLayout>
 
-                    <!-- pop routes - row 2 -->
+                    <!-- ROW 2 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -353,36 +389,57 @@
                         <TextView
                             android:id="@+id/routeBadian"
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="60dp"
                             android:layout_weight="1"
-                            android:layout_marginEnd="6dp"
+                            android:layout_marginEnd="8dp"
                             android:background="@drawable/route_card_background"
                             android:text="Cebu → Badian"
                             android:textColor="@color/text_dark"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:clickable="true"
-                            android:focusable="true"/>
+                            android:focusable="true"
+                            android:elevation="2dp"/>
 
                         <TextView
                             android:id="@+id/routeCarcar"
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="60dp"
                             android:layout_weight="1"
-                            android:layout_marginStart="6dp"
+                            android:layout_marginStart="8dp"
                             android:background="@drawable/route_card_background"
                             android:text="Cebu → Carcar"
                             android:textColor="@color/text_dark"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:clickable="true"
-                            android:focusable="true"/>
+                            android:focusable="true"
+                            android:elevation="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/bus_yellow"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Navigation items can be added here -->
+        <!-- Example: Home, Search, Bookings, Profile buttons -->
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

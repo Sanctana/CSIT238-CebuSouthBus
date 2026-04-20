@@ -20,7 +20,7 @@
         android:id="@+id/nav_trips"
         android:name="edu.cit.tangpos.bustransport.fragments.TripsFragment"
         android:label="My Trips"
-        tools:layout="@layout/fragment_trips" />
+        tools:layout="@layout/fragment_mytrips_empty" />
 
     <fragment
         android:id="@+id/nav_account"
