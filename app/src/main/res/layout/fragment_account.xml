@@ -47,9 +47,13 @@
 
                 <!-- avatar circle -->
                 <View
+                    android:id="@+id/ivProfilePhoto"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/avatar_circle"/>
+                    android:background="@drawable/avatar_circle"
+                    android:src="@drawable/account"
+                    android:padding="25dp"
+                    />
 
                 <!-- user name, email -->
                 <LinearLayout
