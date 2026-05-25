@@ -7,6 +7,8 @@ Bus No. : SF-102
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 55
+Departure: 05:00 AM
+Arrival : 06:05 AM
 ETA     : 1 hr 5 mins
 On-Time : 93%
 
@@ -14,6 +16,8 @@ Bus No. : SF-214
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 42
+Departure: 06:15 AM
+Arrival : 07:33 AM
 ETA     : 1 hr 18 mins
 On-Time : 88%
 
@@ -21,16 +25,28 @@ Bus No. : SF-318
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 45
+Departure: 07:30 AM
+Arrival : 08:55 AM
 ETA     : 1 hr 25 mins
 On-Time : 85%
 
-
 CARCAR
 ---------------------
+Bus No. : CC-120
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 75
+Departure: 04:30 AM
+Arrival : 06:05 AM
+ETA     : 1 hr 35 mins
+On-Time : 95%
+
 Bus No. : CC-401
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 58
+Departure: 05:45 AM
+Arrival : 07:30 AM
 ETA     : 1 hr 45 mins
 On-Time : 90%
 
@@ -38,6 +54,8 @@ Bus No. : CC-244
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 60
+Departure: 06:30 AM
+Arrival : 08:20 AM
 ETA     : 1 hr 50 mins
 On-Time : 87%
 
@@ -45,6 +63,8 @@ Bus No. : CC-517
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 55
+Departure: 08:00 AM
+Arrival : 09:58 AM
 ETA     : 1 hr 58 mins
 On-Time : 84%
 
@@ -52,37 +72,37 @@ Bus No. : CC-882
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 62
+Departure: 09:15 AM
+Arrival : 11:20 AM
 ETA     : 2 hrs 5 mins
 On-Time : 82%
 
-Bus No. : CC-120
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 75
-ETA     : 1 hr 35 mins
-On-Time : 95%
-
-
 SIBONGA
 ---------------------
-Bus No. : SB-155
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 88
-ETA     : 2 hrs 10 mins
-On-Time : 94%
-
 Bus No. : SB-302
 Carrier : V-Hire Operators
 Type    : Air Conditioned
 Fare    : PHP 95
+Departure: 05:15 AM
+Arrival : 07:10 AM
 ETA     : 1 hr 55 mins
 On-Time : 91%
+
+Bus No. : SB-155
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 88
+Departure: 06:00 AM
+Arrival : 08:10 AM
+ETA     : 2 hrs 10 mins
+On-Time : 94%
 
 Bus No. : SB-445
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 72
+Departure: 07:15 AM
+Arrival : 09:40 AM
 ETA     : 2 hrs 25 mins
 On-Time : 86%
 
@@ -90,9 +110,10 @@ Bus No. : SB-581
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 78
+Departure: 08:45 AM
+Arrival : 11:15 AM
 ETA     : 2 hrs 30 mins
 On-Time : 84%
-
 
 ARGAO
 ---------------------
@@ -100,6 +121,8 @@ Bus No. : AG-220
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 98
+Departure: 04:45 AM
+Arrival : 07:20 AM
 ETA     : 2 hrs 35 mins
 On-Time : 93%
 
@@ -107,6 +130,8 @@ Bus No. : AG-344
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 85
+Departure: 06:15 AM
+Arrival : 09:05 AM
 ETA     : 2 hrs 50 mins
 On-Time : 86%
 
@@ -114,30 +139,37 @@ Bus No. : AG-611
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 88
+Departure: 07:45 AM
+Arrival : 10:45 AM
 ETA     : 3 hrs
 On-Time : 82%
 
-
 DALAGUETE
 ---------------------
-Bus No. : DG-801
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 145
-ETA     : 3 hrs 40 mins
-On-Time : 95%
-
 Bus No. : DG-244
 Carrier : V-Hire Operators
 Type    : Air Conditioned
 Fare    : PHP 155
+Departure: 05:30 AM
+Arrival : 08:50 AM
 ETA     : 3 hrs 20 mins
 On-Time : 92%
+
+Bus No. : DG-801
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 145
+Departure: 06:45 AM
+Arrival : 10:25 AM
+ETA     : 3 hrs 40 mins
+On-Time : 95%
 
 Bus No. : DG-521
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 125
+Departure: 08:15 AM
+Arrival : 12:15 PM
 ETA     : 4 hrs
 On-Time : 85%
 
@@ -145,57 +177,68 @@ Bus No. : DG-638
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 130
+Departure: 09:30 AM
+Arrival : 01:45 PM
 ETA     : 4 hrs 15 mins
 On-Time : 81%
 
-
 OSLOB
 ---------------------
-Bus No. : OS-111
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 205
-ETA     : 4 hrs 45 mins
-On-Time : 94%
-
 Bus No. : OS-214
 Carrier : V-Hire Operators
 Type    : Air Conditioned
 Fare    : PHP 215
+Departure: 04:00 AM
+Arrival : 08:20 AM
 ETA     : 4 hrs 20 mins
 On-Time : 91%
+
+Bus No. : OS-111
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 205
+Departure: 05:15 AM
+Arrival : 10:00 AM
+ETA     : 4 hrs 45 mins
+On-Time : 94%
 
 Bus No. : OS-522
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 182
+Departure: 07:00 AM
+Arrival : 12:10 PM
 ETA     : 5 hrs 10 mins
 On-Time : 84%
 
-
 SANTANDER
 ---------------------
-Bus No. : ST-770
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 245
-ETA     : 5 hrs 40 mins
-On-Time : 95%
-
 Bus No. : ST-331
 Carrier : V-Hire Operators
 Type    : Air Conditioned
 Fare    : PHP 255
+Departure: 04:15 AM
+Arrival : 09:30 AM
 ETA     : 5 hrs 15 mins
 On-Time : 92%
+
+Bus No. : ST-770
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 245
+Departure: 05:30 AM
+Arrival : 11:10 AM
+ETA     : 5 hrs 40 mins
+On-Time : 95%
 
 Bus No. : ST-422
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 220
+Departure: 07:15 AM
+Arrival : 01:15 PM
 ETA     : 6 hrs
 On-Time : 83%
-
 
 SAMBOAN
 ---------------------
@@ -203,6 +246,8 @@ Bus No. : SM-290
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 210
+Departure: 05:00 AM
+Arrival : 10:05 AM
 ETA     : 5 hrs 5 mins
 On-Time : 93%
 
@@ -210,6 +255,8 @@ Bus No. : SM-501
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 190
+Departure: 06:30 AM
+Arrival : 12:00 PM
 ETA     : 5 hrs 30 mins
 On-Time : 85%
 
@@ -217,9 +264,10 @@ Bus No. : SM-688
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 195
+Departure: 08:00 AM
+Arrival : 01:40 PM
 ETA     : 5 hrs 40 mins
 On-Time : 82%
-
 
 BADIAN
 ---------------------
@@ -227,6 +275,8 @@ Bus No. : BD-422
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 175
+Departure: 05:45 AM
+Arrival : 09:55 AM
 ETA     : 4 hrs 10 mins
 On-Time : 94%
 
@@ -234,6 +284,8 @@ Bus No. : BD-611
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 158
+Departure: 07:00 AM
+Arrival : 11:35 AM
 ETA     : 4 hrs 35 mins
 On-Time : 86%
 
@@ -241,29 +293,37 @@ Bus No. : BD-704
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 165
+Departure: 08:30 AM
+Arrival : 01:15 PM
 ETA     : 4 hrs 45 mins
 On-Time : 83%
 
 MOALBOAL
 ---------------------
-Bus No. : MB-201
-Carrier : Ceres Bus Liner
-Type    : Air Conditioned
-Fare    : PHP 195
-ETA     : 3 hrs 50 mins
-On-Time : 95%
-
 Bus No. : MB-310
 Carrier : V-Hire Operators
 Type    : Air Conditioned
 Fare    : PHP 205
+Departure: 05:15 AM
+Arrival : 08:45 AM
 ETA     : 3 hrs 30 mins
 On-Time : 91%
+
+Bus No. : MB-201
+Carrier : Ceres Bus Liner
+Type    : Air Conditioned
+Fare    : PHP 195
+Departure: 06:15 AM
+Arrival : 10:05 AM
+ETA     : 3 hrs 50 mins
+On-Time : 95%
 
 Bus No. : MB-566
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 165
+Departure: 07:30 AM
+Arrival : 11:50 AM
 ETA     : 4 hrs 20 mins
 On-Time : 85%
 
@@ -271,9 +331,10 @@ Bus No. : MB-633
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 170
+Departure: 09:00 AM
+Arrival : 01:30 PM
 ETA     : 4 hrs 30 mins
 On-Time : 82%
-
 
 ALOGUINSAN
 ---------------------
@@ -281,6 +342,8 @@ Bus No. : AL-144
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 145
+Departure: 06:00 AM
+Arrival : 09:10 AM
 ETA     : 3 hrs 10 mins
 On-Time : 92%
 
@@ -288,6 +351,8 @@ Bus No. : AL-377
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 125
+Departure: 07:30 AM
+Arrival : 11:05 AM
 ETA     : 3 hrs 35 mins
 On-Time : 84%
 
@@ -295,9 +360,10 @@ Bus No. : AL-599
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 130
+Departure: 09:00 AM
+Arrival : 12:45 PM
 ETA     : 3 hrs 45 mins
 On-Time : 82%
-
 
 BARILI
 ---------------------
@@ -305,6 +371,8 @@ Bus No. : BR-202
 Carrier : Ceres Bus Liner
 Type    : Air Conditioned
 Fare    : PHP 135
+Departure: 05:30 AM
+Arrival : 08:20 AM
 ETA     : 2 hrs 50 mins
 On-Time : 93%
 
@@ -312,6 +380,8 @@ Bus No. : BR-414
 Carrier : Metro Shuttle
 Type    : Ordinary
 Fare    : PHP 115
+Departure: 07:00 AM
+Arrival : 10:15 AM
 ETA     : 3 hrs 15 mins
 On-Time : 86%
 
@@ -319,5 +389,7 @@ Bus No. : BR-688
 Carrier : Sunrays Transit
 Type    : Ordinary
 Fare    : PHP 120
+Departure: 08:30 AM
+Arrival : 11:55 AM
 ETA     : 3 hrs 25 mins
 On-Time : 83%
