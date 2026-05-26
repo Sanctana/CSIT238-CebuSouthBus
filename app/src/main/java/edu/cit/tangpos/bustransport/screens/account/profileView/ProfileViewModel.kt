@@ -1,7 +1,7 @@
 package edu.cit.tangpos.bustransport.screens.account.profileView
 
 import android.content.Context
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class ProfileViewModel(private val context: Context) : ProfileViewContract.Model {

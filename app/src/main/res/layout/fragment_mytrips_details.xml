@@ -50,10 +50,10 @@
         android:layout_height="0dp"
         android:fillViewport="true"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,12 +66,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/bus_yellow"
+                android:gravity="center"
                 android:padding="12dp"
                 android:text="Trip Details"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
 
             <!-- details content box -->
             <LinearLayout
@@ -86,19 +86,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:background="@color/bus_blue"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <TextView
+                        android:id="@+id/tvStartLocationDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cebu"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -107,30 +108,31 @@
                         android:text="→"
                         android:textColor="@color/bus_yellow"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvDestinationDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="Oslob"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- trip info grid -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="12dp">
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -141,19 +143,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Bus Name"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvBusCarrierDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="Ceres Bus Liner"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -165,27 +168,28 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Travel Date"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvTravelDateDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="March 20, 2026"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="12dp">
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -196,19 +200,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Bus Number"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvBusNumberDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="BUS1023 (Aircon)"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -220,19 +225,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Passengers"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvPassengerCountDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="2"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -250,19 +256,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Departure Time"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvDepartureTimeDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="4:30 AM"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -274,19 +281,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:alpha="0.7"
                                 android:text="Arriving Time"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:alpha="0.7"/>
+                                android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/tvArrivalTimeDetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="8:30 AM"
                                 android:textColor="@color/text_dark"
                                 android:textSize="15sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -295,8 +303,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -306,74 +314,15 @@
                         android:text="Passengers"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <LinearLayout
+                        android:id="@+id/passengersContainerDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:paddingTop="12dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="10dp"
-                            android:padding="10dp"
-                            android:background="#FFF9C4">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="1. Saint Tria Tangpos"
-                                android:textColor="@color/text_dark"
-                                android:textSize="14sp"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="F20"
-                                android:textColor="@color/white"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                android:background="@color/bus_blue"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:paddingTop="4dp"
-                                android:paddingBottom="4dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="10dp"
-                            android:background="#FFF9C4">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="2. James Kenneth Acabal"
-                                android:textColor="@color/text_dark"
-                                android:textSize="14sp"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="M21"
-                                android:textColor="@color/white"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                android:background="@color/bus_blue"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:paddingTop="4dp"
-                                android:paddingBottom="4dp"/>
-                        </LinearLayout>
+                        <!-- Dynamic passenger rows -->
                     </LinearLayout>
                 </LinearLayout>
 
@@ -381,11 +330,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:background="@color/bus_yellow"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -394,15 +343,16 @@
                         android:text="Total Amount:"
                         android:textColor="@color/text_dark"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvTotalAmountDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="₱390"
                         android:textColor="@color/text_dark"
                         android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- travel reminders -->
@@ -416,34 +366,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:text="Travel Reminders"
                         android:textColor="@color/text_dark"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="10dp"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
                         android:text="• Please arrive at least 30 minutes before departure for check-in at the kiosk.\n• Bring a valid ID for verification."
                         android:textColor="@color/text_dark"
-                        android:textSize="14sp"
-                        android:lineSpacingExtra="4dp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- bottom navigation -->
-    <include
-        android:id="@+id/bottomNav"
-        layout="@layout/layout_bottom_nav"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

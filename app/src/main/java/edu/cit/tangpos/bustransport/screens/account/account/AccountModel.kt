@@ -2,7 +2,7 @@ package edu.cit.tangpos.bustransport.screens.account.account
 
 import android.content.Context
 import androidx.core.content.edit
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class AccountModel(private val context: Context) : AccountContract.Model {

@@ -1,6 +1,6 @@
 package edu.cit.tangpos.bustransport.screens.account.profileEdit
 
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 
 class ProfileEditPresenter(private var view: ProfileEditContract.View) : ProfileEditContract.Presenter {
     private var model : ProfileEditContract.Model = ProfileEditModel(view.getContext())
@@ -39,10 +39,7 @@ class ProfileEditPresenter(private var view: ProfileEditContract.View) : Profile
             return
         }
 
-
         var newHashedPw: String? = null
-
-        println("HAHAHAHAHAHAHAH")
 
         if (currentPw.isNotEmpty()) {
             println(currentPw)

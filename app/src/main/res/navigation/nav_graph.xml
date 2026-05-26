@@ -113,4 +113,73 @@
         android:name="edu.cit.tangpos.bustransport.screens.account.busCarriers.vhire.VHire"
         android:label="Bus Carriers"
         tools:layout="@layout/fragment_bc_vhire" />
+
+    <fragment
+        android:id="@+id/nav_select_trip"
+        android:name="edu.cit.tangpos.bustransport.screens.selectTrip.SelectTripFragment"
+        android:label="Select Trip"
+        tools:layout="@layout/fragment_select_trip">
+        <argument
+            android:name="destination"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+        <argument
+            android:name="passengers"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_trip_summary"
+        android:name="edu.cit.tangpos.bustransport.screens.tripSummary.TripSummaryFragment"
+        android:label="Trip Summary"
+        tools:layout="@layout/fragment_trip_summary">
+        <argument
+            android:name="busNumber"
+            app:argType="string" />
+        <argument
+            android:name="passengers"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_passenger_details"
+        android:name="edu.cit.tangpos.bustransport.screens.passengerDetails.PassengerDetailsFragment"
+        android:label="Passenger Details"
+        tools:layout="@layout/activity_passenger_details">
+        <argument
+            android:name="busNumber"
+            app:argType="string" />
+        <argument
+            android:name="passengers"
+            app:argType="integer" />
+        <argument
+            android:name="fare"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_passengerDetails_to_reviewPay"
+            app:destination="@id/nav_review_pay" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_review_pay"
+        android:name="edu.cit.tangpos.bustransport.screens.reviewPay.ReviewPayFragment"
+        android:label="Review and Pay"
+        tools:layout="@layout/fragment_review_pay">
+        <argument
+            android:name="busNumber"
+            app:argType="string" />
+        <argument
+            android:name="passengerList"
+            app:argType="edu.cit.tangpos.bustransport.screens.passengerDetails.PassengerData[]" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <argument
+            android:name="fare"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

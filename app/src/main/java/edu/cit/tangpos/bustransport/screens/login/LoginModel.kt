@@ -3,7 +3,7 @@ package edu.cit.tangpos.bustransport.screens.login
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import androidx.core.content.edit
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class LoginModel(private val context: Context) : LoginContract.Model {

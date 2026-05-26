@@ -2,7 +2,7 @@ package edu.cit.tangpos.bustransport.screens.registration
 
 import android.content.ContentValues
 import android.content.Context
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class RegistrationModel(private val context: Context) : RegistrationContract.Model {

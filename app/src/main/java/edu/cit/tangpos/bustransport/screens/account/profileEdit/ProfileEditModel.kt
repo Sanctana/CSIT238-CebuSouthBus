@@ -2,7 +2,7 @@ package edu.cit.tangpos.bustransport.screens.account.profileEdit
 
 import android.content.ContentValues
 import android.content.Context
-import edu.cit.tangpos.bustransport.Utility
+import edu.cit.tangpos.bustransport.utilities.Utility
 import edu.cit.tangpos.bustransport.database.DBHelper
 
 class ProfileEditModel(private var context: Context) : ProfileEditContract.Model {

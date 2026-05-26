@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import edu.cit.tangpos.bustransport.utilities.showShortToast
 
 class ProfileEdit : Fragment(R.layout.fragment_profile_edit), ProfileEditContract.View {
-    private val presenter : ProfileEditContract.Presenter by lazy { ProfileEditPresenter(this) }
+    private val presenter: ProfileEditContract.Presenter by lazy { ProfileEditPresenter(this) }
 
     private lateinit var etFullName: EditText
     private lateinit var etEmail: EditText
@@ -30,7 +30,7 @@ class ProfileEdit : Fragment(R.layout.fragment_profile_edit), ProfileEditContrac
         etNewPassword = view.findViewById(R.id.etNewPassword)
         etConfirmPassword = view.findViewById(R.id.etConfirmPassword)
 
-        if (!presenter.checkUserExists()){
+        if (!presenter.checkUserExists()) {
             return
         }
 

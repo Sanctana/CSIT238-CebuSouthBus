@@ -383,7 +383,6 @@
 
             <!-- Confirm Button -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -393,6 +392,7 @@
                 app:cardBackgroundColor="@color/bus_blue">
 
                 <Button
+                    android:id="@+id/btnConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Confirm"
@@ -403,7 +403,8 @@
                     android:padding="16dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground"/>
+                    android:background="?attr/selectableItemBackground"
+                    app:backgroundTint="@null"/>
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>

@@ -10,12 +10,12 @@ import edu.cit.tangpos.bustransport.R
 import edu.cit.tangpos.bustransport.utilities.navigate
 
 class AccountFragment : Fragment(R.layout.fragment_account), AccountContract.View {
-    private val presenter : AccountContract.Presenter by lazy { AccountPresenter(this) }
+    private val presenter: AccountContract.Presenter by lazy { AccountPresenter(this) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (!presenter.checkUserExists()){
+        if (!presenter.checkUserExists()) {
             return
         }
 

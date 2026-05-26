@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -67,10 +66,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,13 +98,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="#000000"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:text="One-way"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:clickable="true"
-                        android:focusable="true"/>
+                        android:textStyle="bold" />
 
                     <!-- BOOKING FORM BODY -->
                     <LinearLayout
@@ -118,8 +117,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <!-- FROM INPUT -->
                             <LinearLayout
@@ -128,30 +127,30 @@
                                 android:layout_height="48dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/input_background"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical"
-                                android:paddingStart="12dp"
-                                android:paddingEnd="12dp"
                                 android:clickable="true"
-                                android:focusable="true">
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp">
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@drawable/ic_location"
                                     android:contentDescription="Location"
-                                    app:tint="@color/text_dark"/>
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/text_dark" />
 
                                 <TextView
                                     android:id="@+id/txtFrom"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
                                     android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="From"
                                     android:text="South Bus"
                                     android:textColor="@color/text_dark"
-                                    android:textSize="14sp"
-                                    android:hint="From"/>
+                                    android:textSize="14sp" />
                             </LinearLayout>
 
                             <!-- SWAP BUTTON -->
@@ -161,12 +160,12 @@
                                 android:layout_height="32dp"
                                 android:layout_marginStart="8dp"
                                 android:layout_marginEnd="8dp"
-                                android:src="@drawable/ic_swap"
-                                android:contentDescription="Swap"
-                                android:clickable="true"
-                                android:focusable="true"
                                 android:background="?attr/selectableItemBackgroundBorderless"
-                                app:tint="@color/text_dark"/>
+                                android:clickable="true"
+                                android:contentDescription="Swap"
+                                android:focusable="true"
+                                android:src="@drawable/ic_swap"
+                                app:tint="@color/text_dark" />
 
                             <!-- TO INPUT -->
                             <LinearLayout
@@ -175,30 +174,30 @@
                                 android:layout_height="48dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/input_background"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical"
-                                android:paddingStart="12dp"
-                                android:paddingEnd="12dp"
                                 android:clickable="true"
-                                android:focusable="true">
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp">
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@drawable/ic_location"
                                     android:contentDescription="Location"
-                                    app:tint="@color/text_dark"/>
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/text_dark" />
 
                                 <TextView
                                     android:id="@+id/txtTo"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
                                     android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="To"
                                     android:text="To"
                                     android:textColor="#999999"
-                                    android:textSize="14sp"
-                                    android:hint="To"/>
+                                    android:textSize="14sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -211,43 +210,43 @@
                             android:text="Depart"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:id="@+id/btnSelectDate"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:background="@drawable/input_background"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
                             android:clickable="true"
-                            android:focusable="true">
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_calendar"
                                 android:contentDescription="Calendar"
-                                app:tint="@color/text_dark"/>
+                                android:src="@drawable/ic_calendar"
+                                app:tint="@color/text_dark" />
 
                             <TextView
                                 android:id="@+id/txtDate"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="8dp"
+                                android:layout_weight="1"
                                 android:text="Select a date"
                                 android:textColor="#999999"
-                                android:textSize="14sp"/>
+                                android:textSize="14sp" />
 
                             <ImageView
                                 android:layout_width="16dp"
                                 android:layout_height="16dp"
-                                android:src="@drawable/ic_chevron_right"
                                 android:contentDescription="Select"
-                                app:tint="@color/text_dark"/>
+                                android:src="@drawable/ic_chevron_right"
+                                app:tint="@color/text_dark" />
                         </LinearLayout>
 
                         <!-- TRAVELERS SECTION -->
@@ -259,43 +258,43 @@
                             android:text="Travelers"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:id="@+id/btnSelectTravelers"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:background="@drawable/input_background"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
                             android:clickable="true"
-                            android:focusable="true">
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_person"
                                 android:contentDescription="Travelers"
-                                app:tint="@color/text_dark"/>
+                                android:src="@drawable/ic_person"
+                                app:tint="@color/text_dark" />
 
                             <TextView
                                 android:id="@+id/txtTravelers"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="8dp"
+                                android:layout_weight="1"
                                 android:text="2 traveler"
                                 android:textColor="@color/text_dark"
-                                android:textSize="14sp"/>
+                                android:textSize="14sp" />
 
                             <ImageView
                                 android:layout_width="16dp"
                                 android:layout_height="16dp"
-                                android:src="@drawable/ic_chevron_right"
                                 android:contentDescription="Select"
-                                app:tint="@color/text_dark"/>
+                                android:src="@drawable/ic_chevron_right"
+                                app:tint="@color/text_dark" />
                         </LinearLayout>
 
                         <!-- FIND TRIPS BUTTON -->
@@ -305,13 +304,13 @@
                             android:layout_height="56dp"
                             android:layout_marginTop="24dp"
                             android:background="@drawable/button_white"
-                            app:backgroundTint="@null"
+                            android:elevation="2dp"
                             android:text="Find Trips"
+                            android:textAllCaps="false"
                             android:textColor="@color/text_dark"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:textAllCaps="false"
-                            android:elevation="2dp"/>
+                            app:backgroundTint="@null" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -328,11 +327,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Popular Routes"
                     android:textColor="@color/bus_blue"
                     android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="16dp"/>
+                    android:textStyle="bold" />
 
                 <!-- ROUTES GRID -->
                 <LinearLayout
@@ -344,40 +343,40 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="12dp">
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/routeOslob"
                             android:layout_width="0dp"
                             android:layout_height="60dp"
-                            android:layout_weight="1"
                             android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/route_card_background"
+                            android:clickable="true"
+                            android:elevation="2dp"
+                            android:focusable="true"
+                            android:gravity="center"
                             android:text="Cebu → Oslob"
                             android:textColor="@color/text_dark"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:elevation="2dp"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/routeMoalboal"
                             android:layout_width="0dp"
                             android:layout_height="60dp"
-                            android:layout_weight="1"
                             android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/route_card_background"
+                            android:clickable="true"
+                            android:elevation="2dp"
+                            android:focusable="true"
+                            android:gravity="center"
                             android:text="Cebu → Moalboal"
                             android:textColor="@color/text_dark"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:elevation="2dp"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <!-- ROW 2 -->
@@ -390,56 +389,37 @@
                             android:id="@+id/routeBadian"
                             android:layout_width="0dp"
                             android:layout_height="60dp"
-                            android:layout_weight="1"
                             android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/route_card_background"
+                            android:clickable="true"
+                            android:elevation="2dp"
+                            android:focusable="true"
+                            android:gravity="center"
                             android:text="Cebu → Badian"
                             android:textColor="@color/text_dark"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:elevation="2dp"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/routeCarcar"
                             android:layout_width="0dp"
                             android:layout_height="60dp"
-                            android:layout_weight="1"
                             android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/route_card_background"
+                            android:clickable="true"
+                            android:elevation="2dp"
+                            android:focusable="true"
+                            android:gravity="center"
                             android:text="Cebu → Carcar"
                             android:textColor="@color/text_dark"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:elevation="2dp"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- BOTTOM NAVIGATION -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@color/bus_yellow"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- Navigation items can be added here -->
-        <!-- Example: Home, Search, Bookings, Profile buttons -->
-
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
